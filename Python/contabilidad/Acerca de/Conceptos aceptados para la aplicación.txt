@@ -1,0 +1,82 @@
+                                          #Los conceptos aceptados son:
+          De activo a corto plazo
+- Caja 
+- Fondo de caja
+- Bancos
+- Instrumentos financieros
+- Clientes
+- Documentos por cobrar
+- Deudores diversos
+- Funcionarios y empleados
+- IVA acreditable
+- IVA por acreditar
+- IVA a favor
+- Anticipos de impuestos
+- Inventarios
+- Mercancías en tránsito
+- Anticipo a proveedores
+- Papelerías y útiles
+- Propaganda y publicidad
+- Muestras y literaturas medicas
+- Primas de seguros y finanzas
+- Rentas pagadas por anticipado
+- Intereses pagados por anticipado
+           
+            De activo a largo plazo       
+- Terrenos
+- Edificios
+- Maquinaria
+- Mobiliario y equipo de oficina
+- Muebles y enseres
+- Equipo de transporte
+- Equipo de entrega y reparto
+- Equipo de cómputo
+- Inmuebles no utilizados
+- Otros
+- Derechos de autor
+- Patentes
+- Marcas y nombres comerciales
+- Inversiones preoperativas
+- Franquicias
+- Inversiones de constitución
+- Fondos a largo plazo
+- Cuentas por cobrar a largo plazo
+- Depósitos en garantías
+- Pagos anticipados a largo plazo
+- Crédito mercantil
+            
+             De pasivo a corto plazo        
+- Proveedores
+- Acreedores diversos
+- Documentos por pagar
+- Acreedores bancarios
+- Anticipo a clientes
+- Dividendos por pagar
+- IVA trasladado
+- IVA por trasladar
+- IVA a pagar
+- Impuestos y derechos por pagar
+- Impuestos y derechos retenidos por enterar
+- Impuesto sobre la renta (ISR)por pagar
+- Participación de los trabajadores en las utilidades (PTU)por pagar
+- Utilidades por pagar (PTU)
+- Rentas cobradas por anticipado
+        
+             De pasivo a largo plazo        
+- Acreedores bancarios a largo plazo
+- Documentos por pagar a largo plazo
+- Acreedores hipotecarios a largo plazo
+- Obligaciones en circulación
+- Rentas cobradas por anticipado a largo plazo
+- Intereses cobrados por anticipado a largo plazo
+         
+             De capital contable contribuido        
+- Capital social
+- Aportaciones para futuros aumentos de capital
+- Prima en venta de acciones
+          
+             De capital contable ganado 
+- Utilidades acumuladas
+- Pérdidas acumuladas
+- Reservas
+- Efectos de la inflación

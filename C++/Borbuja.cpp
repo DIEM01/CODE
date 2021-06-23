@@ -19,5 +19,5 @@ while (i < num)
               j = j + 1;
       i = i + 1;
 
-	return 0;// prueba 1
+	return 0;// prueba 2
 }

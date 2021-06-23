@@ -233,7 +233,7 @@ void consulta (){
 					gotoxy (70,14);cout<<"Código postal: "<<empleados.direc.cp<<endl;
 					getch ();
 				}
-					im >>empleados.num ;
+					getline(im, empleados.num);
 					fflush(stdin);
 			}
 		}

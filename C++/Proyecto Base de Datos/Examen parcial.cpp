@@ -46,7 +46,7 @@ void menu(){
 		gotoxy (1,8);cout <<" *       5. Despliega todas las personas      * ";
 		gotoxy (1,9);cout <<" *       0. salir                             * ";
 	    gotoxy (1,10);cout <<" ********************************************** ";
-		gotoxy (1,11);cout <<" *       Elige una opción:                    * ";
+		gotoxy (1,11);cout <<" *       Elige una opciÃ³n:                    * ";
 		gotoxy (1,12);cout <<" ********************************************** ";
 }
 
@@ -72,7 +72,7 @@ void altas (){
 			getline (ve, empleados.num);
 		}	
 		if (empleados.num >"99"){
-			gotoxy(70, 2);cout <<"Lista llena intente otra opción";
+			gotoxy(70, 2);cout <<"Lista llena intente otra opciÃ³n";
 			getch();	
 		}
 		else {	
@@ -85,7 +85,7 @@ void altas (){
 				}
 			gotoxy (67,15 );cout << "*************************************************";
 			gotoxy(70,2);cout<<"El No. de registros llenos son: "<<empleados.num;		fflush(stdin);
-			gotoxy(70,3);cout<<"Digite el No. siguiente del No. señalado ";		fflush(stdin);
+			gotoxy(70,3);cout<<"Digite el No. siguiente del No. seÃ±alado ";		fflush(stdin);
 		    getline(cin,empleados.num);	
 			fflush(stdin);
 			gotoxy(70,4);cout<<"Digite el nombre: ";
@@ -103,7 +103,7 @@ void altas (){
 			gotoxy(70,8);cout<<"Digite la edad: ";
 	     	getline(cin,empleados.edad);
 			fflush(stdin); 	
-			gotoxy(70,9);cout<<"Digite el teléfono: ";
+			gotoxy(70,9);cout<<"Digite el telÃ©fono: ";
 	        getline(cin,empleados.numero);
 			fflush(stdin); 
 			gotoxy(70,10);cout<<"Digite su calle: ";
@@ -118,7 +118,7 @@ void altas (){
 			gotoxy(70,13);cout<<"Digite su No. externo: ";
 		    getline(cin,empleados.direc.no_ext);
 			fflush(stdin);
-			gotoxy(70,14);cout<<"Digite su código postal: ";
+			gotoxy(70,14);cout<<"Digite su cÃ³digo postal: ";
 			getline(cin,empleados.direc.cp);
 			fflush(stdin);	
 		    es<<"\n"<<empleados.num<<"\n"<<empleados.nombre<<"\n"<<empleados.ap_pat<<"\n"<< empleados.ap_mat <<"\n"<<empleados.correo<<"\n"<<empleados.edad<<"\n"<<empleados.numero<<"\n"<<empleados.direc.calle<<"\n" <<empleados.direc.colonia<<"\n"<<empleados.direc.no_int<<"\n"<<empleados.direc.no_ext<<"\n"<<empleados.direc.cp;
@@ -164,12 +164,12 @@ void despliega(){
 			gotoxy (70,ii+7);cout<<"Apellido materno:"<<empleados.ap_mat<<endl;	
 			gotoxy (70,ii+8);cout<<"Correo:"<<empleados.correo<<endl;
 			gotoxy (70,ii+9);cout<<"Edad:"<<empleados.edad<<endl;
-			gotoxy (70,ii+10);cout<<"Teléfono:"<<empleados.numero<<endl;
+			gotoxy (70,ii+10);cout<<"TelÃ©fono:"<<empleados.numero<<endl;
 			gotoxy (70,ii+11);cout<<"Calle:"<<empleados.direc.calle<<endl;
 			gotoxy (70,ii+12);cout<<"Colonia:"<<empleados.direc.colonia<<endl;
 			gotoxy (70,ii+13);cout<<"No. interno:"<<empleados.direc.no_int<<endl;
 			gotoxy (70,ii+14);cout<<"No. externo:"<<empleados.direc.no_ext<<endl;
-			gotoxy (70,ii+15);cout<<"Código postal:"<<empleados.direc.cp<<endl;
+			gotoxy (70,ii+15);cout<<"CÃ³digo postal:"<<empleados.direc.cp<<endl;
 			ii =ii+13;
 			getline (im, empleados.num);
 		}
@@ -195,11 +195,11 @@ void consulta (){
 			gotoxy (115, c  );	cout << "*"; 
 		}
 		gotoxy (67,15 );	cout << "*************************************************"; 
-		gotoxy (70,2);cout <<"Ingrese la posición a consultar: ";
+		gotoxy (70,2);cout <<"Ingrese la posiciÃ³n a consultar: ";
 		getline (cin, aux);
 		fflush(stdin);
 		if (aux > "99"){
-			gotoxy(70,5);cout << "Posición fuera de rango intenta otra posición ";
+			gotoxy(70,5);cout << "PosiciÃ³n fuera de rango intenta otra posiciÃ³n ";
 			getch();
 			fflush(stdin);
 		}
@@ -207,20 +207,30 @@ void consulta (){
 			getline(im, empleados.num);
 			while (!im. eof()){
 				fflush(stdin);
-				im>>empleados.nombre>>empleados.ap_pat>>empleados.ap_mat>>empleados.correo>>empleados.edad>>empleados.numero>>empleados.direc.calle>>empleados.direc.colonia>>empleados.direc.no_int>>empleados.direc.no_ext>>empleados.direc.cp;
-        		if (empleados .num== aux ){
-					gotoxy (70,3);cout << "Los valores  de la posición: "<< empleados.num ;
+				getline (im,empleados.nombre );
+				getline (im,empleados.ap_pat);
+				getline (im,empleados.ap_mat );
+				getline (im,empleados.correo );
+				getline (im,empleados.edad);
+				getline (im,empleados.numero);
+				getline (im,empleados.direc.calle );
+				getline (im,empleados.direc.colonia );
+				getline (im,empleados.direc.no_int);
+				getline (im,empleados.direc.no_ext );
+				getline (im,empleados.direc.cp );
+				if (empleados .num== aux ){
+					gotoxy (70,3);cout << "Los valores  de la posiciÃ³n: "<< empleados.num ;
 					gotoxy (70,4);cout<<"Nombre: "<<empleados.nombre<<endl;
 					gotoxy (70,5);cout<<"Apellido paterno: "<<empleados.ap_pat<<endl;
 					gotoxy (70,6);cout<<"Apellido materno: "<<empleados.ap_mat<<endl;	
 					gotoxy (70,7);cout<<"Correo: "<<empleados.correo<<endl;
 					gotoxy(70,8);cout<<"Edad: "<<empleados.edad<<endl;
-					gotoxy(70,9);cout<<"Teléfono: "<<empleados.numero<<endl;
+					gotoxy(70,9);cout<<"TelÃ©fono: "<<empleados.numero<<endl;
 					gotoxy (70,10);cout<<"Calle: "<<empleados.direc.calle<<endl;
 					gotoxy (70,11);cout<<"Colonia: "<<empleados.direc.colonia<<endl;
 					gotoxy (70,12);cout<<"No. interno: "<<empleados.direc.no_int<<endl;
 					gotoxy (70,13);cout<<"No. externo: "<<empleados.direc.no_ext<<endl;
-					gotoxy (70,14);cout<<"Código postal: "<<empleados.direc.cp<<endl;
+					gotoxy (70,14);cout<<"CÃ³digo postal: "<<empleados.direc.cp<<endl;
 					getch ();
 				}
 					im >>empleados.num ;
@@ -252,9 +262,9 @@ void cambios (){
 		}
 		gotoxy (67,16);	cout << "*************************************************";
 		char baja ;
-		gotoxy (70, 2);cout << "Ingrese la posición a cambiar: "; getline (cin, aux) ;
+		gotoxy (70, 2);cout << "Ingrese la posiciÃ³n a cambiar: "; getline (cin, aux) ;
 		if (aux > "99"){
-			gotoxy(70,5);cout << "Posición fuera de rango intenta otra posición ";
+			gotoxy(70,5);cout << "PosiciÃ³n fuera de rango intenta otra posiciÃ³n ";
 			getch ();
 		}
 		else {
@@ -273,18 +283,18 @@ void cambios (){
 				getline (leer,empleados.direc.cp );
 				if (empleados.num==aux){
         			encontrado = true ;
-					gotoxy (70,3);cout << "Los valores  de la posición: "<< empleados.num<<endl ;
+					gotoxy (70,3);cout << "Los valores  de la posiciÃ³n: "<< empleados.num<<endl ;
 					gotoxy (70,4);cout<<"Nombre: "<<empleados  .nombre<<endl;
 					gotoxy (70,5);cout<<"Apellido paterno: "<<empleados.ap_pat<<endl;
 					gotoxy (70,6);cout<<"Apellido materno: "<<empleados.ap_mat<<endl;	
 					gotoxy (70,7);cout<<"Correo: "<<empleados.correo<<endl;
 					gotoxy(70,8);cout<<"Edad: "<<empleados.edad<<endl;
-					gotoxy(70,9);cout<<"Teléfono: "<<empleados.numero<<endl;
+					gotoxy(70,9);cout<<"TelÃ©fono: "<<empleados.numero<<endl;
 					gotoxy (70,10);cout<<"Calle: "<<empleados.direc.calle<<endl;
 					gotoxy (70,11);cout<<"Colonia: "<<empleados.direc.colonia<<endl;
 					gotoxy (70,12);cout<<"No. interno: "<<empleados.direc.no_int<<endl;
 					gotoxy (70,13);cout<<"No. externo: "<<empleados.direc.no_ext<<endl;
-					gotoxy (70,14);cout<<"Código postal: "<<empleados.direc.cp<<endl;
+					gotoxy (70,14);cout<<"CÃ³digo postal: "<<empleados.direc.cp<<endl;
 					gotoxy(70,15);cout <<"cambiar s/n:";cin >> baja ;
 					if (baja =='s'){
 						gotoxy (1,17);cout <<" ********************************************** ";
@@ -304,7 +314,7 @@ void cambios (){
 						gotoxy (1,31);cout <<" *       12. Cambios de total de datos        * ";
 						gotoxy (1,32);cout <<" *       0. salir                             * ";
 	 				    gotoxy (1,33);cout <<" ********************************************** ";
-						gotoxy (1,34);cout <<" *       Elige una opción:                    * ";
+						gotoxy (1,34);cout <<" *       Elige una opciÃ³n:                    * ";
 						gotoxy (1,35);cout <<" ********************************************** ";
 						int opcion;	do{
 							gotoxy(32,34);cout <<"    ";
@@ -316,12 +326,12 @@ void cambios (){
 								case 3: 	gotoxy(70,19);cout<<"Digite el apellido materno: ";cin>>empleados.ap_mat;fflush(stdin);	break;
 								case 4: 	gotoxy(70,20);cout<<"Digite el correo: ";cin>>empleados.correo;fflush(stdin);break;
 								case 5:		gotoxy(70,21);cout<<"Digite la edad: ";cin>>empleados.edad;fflush(stdin);break;
-								case 6: 	gotoxy(70,22);cout<<"Digite el teléfono: ";cin>>empleados.numero;fflush(stdin); break;
+								case 6: 	gotoxy(70,22);cout<<"Digite el telÃ©fono: ";cin>>empleados.numero;fflush(stdin); break;
 								case 7: 	gotoxy(70,23);cout<<"Digite su calle: ";cin>>empleados.direc.calle;fflush(stdin); break;
 								case 8: 	gotoxy(70,24);cout<<"Digite su colonia: ";cin>>empleados.direc.colonia;fflush(stdin); break;
 								case 9: 	gotoxy(70,25);cout<<"Digite su No. interno: ";cin>>empleados.direc.no_int;fflush(stdin); break;
 								case 10: 	gotoxy(70,26);cout<<"Digite su No. externo: ";cin>>empleados.direc.no_ext;fflush(stdin); break;
-								case 11: 	gotoxy(70,27);cout<<"Digite su código postal: ";cin>>empleados.direc.cp;fflush(stdin);break;
+								case 11: 	gotoxy(70,27);cout<<"Digite su cÃ³digo postal: ";cin>>empleados.direc.cp;fflush(stdin);break;
 								case 12:  
 									gotoxy(70,17);cout<<"Digite el nombre: ";
 									cin>>empleados.nombre;
@@ -338,7 +348,7 @@ void cambios (){
 									gotoxy(70,21);cout<<"Digite la edad: ";
 									cin>>empleados.edad;
 									fflush(stdin); 
-									gotoxy(70,22);cout<<"Digite el teléfono: ";
+									gotoxy(70,22);cout<<"Digite el telÃ©fono: ";
 									cin>>empleados.numero;
 									fflush(stdin); 
 									gotoxy(70,23);cout<<"Digite su calle: ";
@@ -353,15 +363,15 @@ void cambios (){
 									gotoxy(70,26);cout<<"Digite su No. externo: ";
 									cin>>empleados.direc.no_ext;
 									fflush(stdin);
-									gotoxy(70,27);cout<<"Digite su código postal: ";
+									gotoxy(70,27);cout<<"Digite su cÃ³digo postal: ";
 									cin>>empleados.direc.cp;
 									fflush(stdin);break;			
-								default : gotoxy (5,12); cout << "Usted ingresó una opcion incorrecta ";
+								default : gotoxy (5,12); cout << "Usted ingresÃ³ una opcion incorrecta ";
 								getch();	
 							}	
 						}while (opcion > 0 );
 						auxili<<empleados.num<<"\n"<<empleados.nombre<<"\n"<<empleados.ap_pat<<"\n"<< empleados.ap_mat<<"\n"<<empleados.correo<<"\n"<<empleados.edad<<"\n"<<empleados.numero<<"\n"<<empleados.direc.calle<<"\n" <<empleados.direc.colonia<<"\n"<<empleados.direc.no_int<<"\n"<<empleados.direc.no_ext<<"\n"<<empleados.direc.cp<<"\n";
-						gotoxy (70,28);cout << "El valor cambió satisfactoramente ";
+						gotoxy (70,28);cout << "El valor cambiÃ³ satisfactoramente ";
 						getch();
 					}
 					else {
@@ -408,9 +418,9 @@ void bajas (){
 		}
 		gotoxy (67,16);	cout << "*************************************************";
 		char baja ;
-		gotoxy (70, 2);cout << "Ingrese la posición a dar de baja: "; getline (cin, aux) ;
+		gotoxy (70, 2);cout << "Ingrese la posiciÃ³n a dar de baja: "; getline (cin, aux) ;
 		if (aux> "99"){
-			gotoxy(70,5);cout << "Posición fuera de rango intenta otra posición ";
+			gotoxy(70,5);cout << "PosiciÃ³n fuera de rango intenta otra posiciÃ³n ";
 			getch ();
 		}
 		else {
@@ -429,18 +439,18 @@ void bajas (){
 				getline (leer,empleados.direc.cp );
 				if (empleados.num== aux){
         			encontrado = true ;
-					gotoxy (70,3);cout << "Los valores  de la posición: "<< empleados.num<<endl ;
+					gotoxy (70,3);cout << "Los valores  de la posiciÃ³n: "<< empleados.num<<endl ;
 					gotoxy (70,4);cout<<"Nombre: "<<empleados.nombre<<endl;
 					gotoxy (70,5);cout<<"Apellido paterno: "<<empleados.ap_pat<<endl;
 					gotoxy (70,6);cout<<"Apellido materno: "<<empleados.ap_mat<<endl;	
 					gotoxy (70,7);cout<<"Correo: "<<empleados.correo<<endl;
 					gotoxy(70,8);cout<<"Edad: "<<empleados.edad<<endl;
-					gotoxy(70,9);cout<<"Teléfono: "<<empleados.numero<<endl;
+					gotoxy(70,9);cout<<"TelÃ©fono: "<<empleados.numero<<endl;
 					gotoxy (70,10);cout<<"Calle: "<<empleados.direc.calle<<endl;
 					gotoxy (70,11);cout<<"Colonia: "<<empleados.direc.colonia<<endl;
 					gotoxy (70,12);cout<<"No. interno: "<<empleados.direc.no_int<<endl;
 					gotoxy (70,13);cout<<"No. externo: "<<empleados.direc.no_ext<<endl;
-					gotoxy (70,14);cout<<"Código postal: "<<empleados.direc.cp<<endl;
+					gotoxy (70,14);cout<<"CÃ³digo postal: "<<empleados.direc.cp<<endl;
 					gotoxy(70,15);cout <<"Dar de baja s/n:";cin >> baja ;
 					if (baja =='s'){
 						gotoxy(70,16);cout <<"El usuario ha sido dado de baja"; 
@@ -486,7 +496,7 @@ int main (){
 			case 3: consulta();	break;
 			case 4:cambios(); break;
 			case 5: despliega(); break;
-			default : gotoxy (5,11); cout << "Usted ingresó una opcion incorrecta ";
+			default : gotoxy (5,11); cout << "Usted ingresÃ³ una opcion incorrecta ";
 			getch();	
 		}	
 	}while (opcion > 0 );

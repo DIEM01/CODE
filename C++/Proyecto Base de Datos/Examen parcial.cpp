@@ -124,7 +124,7 @@ void altas (){
 		    es<<"\n"<<empleados.num<<"\n"<<empleados.nombre<<"\n"<<empleados.ap_pat<<"\n"<< empleados.ap_mat <<"\n"<<empleados.correo<<"\n"<<empleados.edad<<"\n"<<empleados.numero<<"\n"<<empleados.direc.calle<<"\n" <<empleados.direc.colonia<<"\n"<<empleados.direc.no_int<<"\n"<<empleados.direc.no_ext<<"\n"<<empleados.direc.cp;
    		}
 	}							
-	else{										
+	else{			           							
     	error();									
     }
     es.close();

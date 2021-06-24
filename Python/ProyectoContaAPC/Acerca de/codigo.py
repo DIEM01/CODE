@@ -1,5 +1,4 @@
-#Se requiere del interprete de Python en su versión 3.x para poder leer este codigo.
-#Autor: Ivan Flores Moran 
+#Python en su versión 3.x
 
 from tkinter import *
 raiz = Tk()

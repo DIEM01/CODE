@@ -8,13 +8,19 @@ cursor = conexion. cursor ()
 
 #cursor.execute ("INSERT INTO Productos VALUES ('BALON', ' 15', 'DEPORTES')")
 # insertar datos por una tupla 
-prodos =[
+""" prodos =[
+    
     ("CAMISA",23, "DEPORTES"),
     ("JARRÓN",10, "CERAMICA"),
     ("CAMINON",3, "JUEGUETERIA")
 
+] """
+cursor.execute ("SELECT * FROM PRODUCTOS")
 
-]
-cursor.executemany("INSERT INTO PRODUCTOS VALUES (?,?,?)", prodos)
+prod= cursor.fetchall()
+print (prod)
+
+#cursor.executemany("INSERT INTO PRODUCTOS VALUES (?,?,?)", prodos)
 conexion.commit ()
 conexion.close ()
+

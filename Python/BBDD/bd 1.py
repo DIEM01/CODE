@@ -1,10 +1,20 @@
 import sqlite3
+from sqlite3.dbapi2 import Cursor
 conexion = sqlite3.connect ("BD")
 #
 
 cursor = conexion. cursor ()
 #cursor.execute ("CREATE TABLE PRODUCTOS (NOMBRE_ART varchar (50), PRECIO INTEGER , SECCION varchar (20) )") #solo se hace 1 vez 
 
-cursor.execute ("INSERT INTO Productos VALUES ('BALON', ' 15', 'DEPORTES')")
+#cursor.execute ("INSERT INTO Productos VALUES ('BALON', ' 15', 'DEPORTES')")
+# insertar datos por una tupla 
+prodos =[
+    ("CAMISA",23, "DEPORTES"),
+    ("JARRÓN",10, "CERAMICA"),
+    ("CAMINON",3, "JUEGUETERIA")
+
+
+]
+cursor.executemany("INSERT INTO PRODUCTOS VALUES (?,?,?)", prodos)
 conexion.commit ()
 conexion.close ()

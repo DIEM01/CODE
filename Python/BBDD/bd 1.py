@@ -21,6 +21,7 @@ prod= cursor.fetchall()
 print (prod)
 
 #cursor.executemany("INSERT INTO PRODUCTOS VALUES (?,?,?)", prodos)
+#creacion de campo clave  
 conexion.commit ()
 conexion.close ()
 

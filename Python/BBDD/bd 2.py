@@ -13,7 +13,7 @@ cursor.execute (" CREATE TABLE PROD2 (ID INTERGER PRIMARY KEY AUTOINCREMENT  ,NO
 prodos =[
     
     ("CAMISA", 23 ,"DEPORTES"),
-    ("JARRÓN",10, "CERAMICA"),
+    ("JARRÓN",10, "CERAMICA"),PP
     ("CAMINON",3, "JUEGUETERIA"),
     ("TRENN",53, "JUEGUETERIA")
 ] 

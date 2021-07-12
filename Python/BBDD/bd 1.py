@@ -12,7 +12,7 @@ cursor = conexion. cursor ()
     
     ("CAMISA",23, "DEPORTES"),
     ("JARRÓN",10, "CERAMICA"),
-    ("CAMINON",3, "JUEGUETERIA")
+    ("CAMINON",3, "JUEGUETERIA")P
 
 ] """
 cursor.execute ("SELECT * FROM PRODUCTOS")

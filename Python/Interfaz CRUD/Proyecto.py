@@ -10,11 +10,6 @@ raiz['bg'] = '#49A'
 myframe.pack()
 raiz.title("CRUD PERSONAS")
 
-
-
-
-
-
 Mymenu = tk.Menu(raiz)  
 filemenu = tk.Menu(Mymenu, tearoff=0) 
 Mymenu.add_cascade(label='BBDD', menu=filemenu)
@@ -22,7 +17,6 @@ filemenu.add_command(label='Crear')
 filemenu.add_separator()
 filemenu.add_command(label='Salir')
 raiz.config(menu=Mymenu)  
-
 
 editmenu = tk.Menu(Mymenu, tearoff=0)   
 Mymenu.add_cascade(label='CRUD', menu=editmenu)   
@@ -38,8 +32,6 @@ editmenu.add_command(label='Borrar datos')
 editmenu = tk.Menu(Mymenu, tearoff=0)   
 Mymenu.add_cascade(label='Acerca de', menu=editmenu)   
 editmenu.add_command(label='Licencia ')
-
-
 
 ca = StringVar()
 
@@ -59,7 +51,6 @@ m6 = Label(myframe , text = "Contraseña:")
 m6.place(x = 62, y = 130)
 m6.config (bg ='#49A',fg ='white')
 
-
 ca = Entry(myframe, textvariable=ca )
 ca.place(x = 140, y = 10)
 
@@ -75,22 +66,13 @@ c3.place(x = 140, y = 100)
 c4 = Entry(myframe, textvariable=ca )
 c4.place(x = 140, y = 130)
 
-
-
-
-
-
-
-
-
-
 def window (): 
 
        raiz.destroy() 
 def borrar():
     res = ""
     m4.config(text = res)
-    
+    #
 b1 =Button(myframe, text = "Create", width = 6)
 b1.place(x = 10, y = 170)
 

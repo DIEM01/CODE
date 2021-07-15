@@ -24,7 +24,6 @@ def borrar():
     c4.delete (0,"end")
     c5.delete (0,"end")
 def conec ():
-    #from sqlite3.dbapi2 import Cursor
     conexion = sqlite3.connect ("BD")
     cursor = conexion. cursor ()
     try: 
@@ -33,18 +32,10 @@ def conec ():
         MessageBox.showinfo("!Oh, no!", "La base de datos ha sido creada.")  
         conexion.commit ()
         conexion.close ()
-
 def ins ():
-
-   # from sqlite3.dbapi2 import Cursor
     conexion = sqlite3.connect ("BD")
     cursor = conexion. cursor ()
-
-    cursor.execute ("INSERT INTO PROD2 VALUES (NULL, '" + c2.get()+
-    "','"+ c3.get()+
-    "','" +c4.get()+
-    "','" +c5.get()+"')")
-
+    cursor.execute ("INSERT INTO PROD2 VALUES (NULL, '" + c2.get() + "','" + c3.get() + "','" +c4.get() + "','" + c5.get() + "')")
     conexion.commit ()
     conexion.close ()
 
@@ -88,6 +79,6 @@ c3 = Entry(myframe, textvariable=c33 )
 c3.place(x = 140, y = 70)
 c4 = Entry(myframe, textvariable=c44 )
 c4.place(x = 140, y = 100)
-c5 = Entry(myframe, textvariable=c55 )
+c5 = Entry(myframe, textvariable=c55 )#JNININ
 c5.place(x = 140, y = 130)
 raiz.mainloop() 

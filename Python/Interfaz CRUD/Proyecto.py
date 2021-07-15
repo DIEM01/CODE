@@ -39,6 +39,20 @@ def ins ():
     conexion.commit ()
     conexion.close ()
 
+def up():
+    conexion = sqlite3.connect ("BD")
+    cursor = conexion. cursor ()
+
+    conexion.commit ()
+    conexion.close ()
+def dele():
+    conexion = sqlite3.connect ("BD")
+    cursor = conexion. cursor ()
+    cursor.execute ("DELETE FROM PROD2 WHERE ID = " + c1.get() +" ")  
+    conexion.commit ()
+    conexion.close ()
+
+
 
 Mymenu = tk.Menu(raiz)  
 filemenu = tk.Menu(Mymenu, tearoff=0) 
@@ -47,15 +61,18 @@ filemenu.add_command(label='Conexión', command= conec)
 filemenu.add_separator()
 filemenu.add_command(label='Salir', command=window)
 raiz.config(menu=Mymenu) 
+
 editmenu = tk.Menu(Mymenu, tearoff=0)   
 Mymenu.add_cascade(label='CRUD', menu=editmenu)  
 editmenu.add_command(label='Crear',command= ins)
 editmenu.add_command(label='Leer')
 editmenu.add_command(label='Actualizar')
-editmenu.add_command(label='Eliminar')
+editmenu.add_command(label='Eliminar', command= dele)
+
 editmenu1 = tk.Menu(Mymenu, tearoff=0) 
 Mymenu.add_cascade(label='Editar', menu=editmenu1)   
 editmenu1.add_command(label='Borrar datos',command=borrar)
+
 m1 = Label(myframe , text = "ID:")
 m1.place(x = 107, y = 10)
 m1.config (bg ='#49A',fg ='white')
@@ -71,6 +88,7 @@ m4.config (bg ='#49A',fg ='white')
 m5 = Label(myframe , text = "Contraseña:")
 m5.place(x = 62, y = 130)
 m5.config (bg ='#49A',fg ='white')
+
 c1 = Entry(myframe, textvariable=c11 )
 c1.place(x = 140, y = 10)
 c2 = Entry(myframe, textvariable=c22 )
@@ -79,6 +97,6 @@ c3 = Entry(myframe, textvariable=c33 )
 c3.place(x = 140, y = 70)
 c4 = Entry(myframe, textvariable=c44 )
 c4.place(x = 140, y = 100)
-c5 = Entry(myframe, textvariable=c55 )#JNININ
+c5 = Entry(myframe, textvariable=c55 )
 c5.place(x = 140, y = 130)
 raiz.mainloop() 

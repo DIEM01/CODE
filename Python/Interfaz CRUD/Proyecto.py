@@ -54,13 +54,11 @@ def read():
         c44.set (usuario [3])
         c55.set (usuario [4])
     conexion.commit ()
-
     conexion.close ()
 
 def up ():
     conexion = sqlite3.connect ("BD")
     cursor = conexion. cursor ()
-    #cursor.execute ("UPDATE  PROD2   ('" + c1.get() + "', '" + c2.get() + "','" + c3.get() + "','" +c4.get() + "','" + c5.get() + "')" WHERE = 'ID')
     cursor.execute ("UPDATE PROD2 SET NOMBRE  =  '" + c2.get()+ "', APELLIDOPAT = '" + c3.get() + "', APELLIDOMAT = '" + c4.get() + "', CONTRASEÑA = '" + c5.get() + "' WHERE ID = " + c1.get()  )  
     conexion.commit ()
     conexion.close ()

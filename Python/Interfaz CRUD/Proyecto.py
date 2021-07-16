@@ -38,13 +38,33 @@ def ins ():
     cursor.execute ("INSERT INTO PROD2 VALUES (NULL, '" + c2.get() + "','" + c3.get() + "','" +c4.get() + "','" + c5.get() + "')")
     conexion.commit ()
     conexion.close ()
-
-def up():
+def read():
     conexion = sqlite3.connect ("BD")
     cursor = conexion. cursor ()
 
+    cursor.execute ("SELECT * FROM PROD2 WHERE ID = " + c1.get() )  #el + es para concatenar 
+    user= cursor.fetchall()
+    
+    for usuario in user :
+#se usa el string para set. insert y delete es para los entrys 
+        c11.set (usuario [0])
+        
+        c22.set (usuario [1])
+        c33.set (usuario [2])
+        c44.set (usuario [3])
+        c55.set (usuario [4])
+    conexion.commit ()
+
+    conexion.close ()
+
+def up ():
+    conexion = sqlite3.connect ("BD")
+    cursor = conexion. cursor ()
+    #cursor.execute ("UPDATE  PROD2   ('" + c1.get() + "', '" + c2.get() + "','" + c3.get() + "','" +c4.get() + "','" + c5.get() + "')" WHERE = 'ID')
+    cursor.execute ("UPDATE PROD2 SET NOMBRE  =  '" + c2.get()+ "', APELLIDOPAT = '" + c3.get() + "', APELLIDOMAT = '" + c4.get() + "', CONTRASEÑA = '" + c5.get() + "' WHERE ID = " + c1.get()  )  
     conexion.commit ()
     conexion.close ()
+
 def dele():
     conexion = sqlite3.connect ("BD")
     cursor = conexion. cursor ()
@@ -65,8 +85,8 @@ raiz.config(menu=Mymenu)
 editmenu = tk.Menu(Mymenu, tearoff=0)   
 Mymenu.add_cascade(label='CRUD', menu=editmenu)  
 editmenu.add_command(label='Crear',command= ins)
-editmenu.add_command(label='Leer')
-editmenu.add_command(label='Actualizar')
+editmenu.add_command(label='Leer', command= read)
+editmenu.add_command(label='Actualizar', command= up)
 editmenu.add_command(label='Eliminar', command= dele)
 
 editmenu1 = tk.Menu(Mymenu, tearoff=0) 

@@ -41,36 +41,38 @@ def ins ():
 def read():
     conexion = sqlite3.connect ("BD")
     cursor = conexion. cursor ()
-
-    cursor.execute ("SELECT * FROM PROD2 WHERE ID = " + c1.get() )  #el + es para concatenar 
+    try:
+        cursor.execute ("SELECT * FROM PROD2 WHERE ID = " + c1.get() )  #el + es para concatenar 
+    except sqlite3.OperationalError:
+        MessageBox.showinfo("!Oh, no!", "Inserta el ID a consultar.")
     user= cursor.fetchall()
-    
     for usuario in user :
-#se usa el string para set. insert y delete es para los entrys 
+            #se usa el string para set. insert y delete es para los entrys 
         c11.set (usuario [0])
-        
         c22.set (usuario [1])
         c33.set (usuario [2])
         c44.set (usuario [3])
         c55.set (usuario [4])
-    conexion.commit ()
-    conexion.close ()
-
+        conexion.commit ()
+        conexion.close ()
 def up ():
     conexion = sqlite3.connect ("BD")
     cursor = conexion. cursor ()
-    cursor.execute ("UPDATE PROD2 SET NOMBRE  =  '" + c2.get()+ "', APELLIDOPAT = '" + c3.get() + "', APELLIDOMAT = '" + c4.get() + "', CONTRASEÑA = '" + c5.get() + "' WHERE ID = " + c1.get()  )  
+    try:
+        cursor.execute ("UPDATE PROD2 SET NOMBRE  =  '" + c2.get()+ "', APELLIDOPAT = '" + c3.get() + "', APELLIDOMAT = '" + c4.get() + "', CONTRASEÑA = '" + c5.get() + "' WHERE ID = " + c1.get()  )  
+    except sqlite3.OperationalError:
+        MessageBox.showinfo("!Oh, no!", "Inserta datos a registrar.")
     conexion.commit ()
     conexion.close ()
-
 def dele():
     conexion = sqlite3.connect ("BD")
     cursor = conexion. cursor ()
-    cursor.execute ("DELETE FROM PROD2 WHERE ID = " + c1.get() +" ")  
+    try:
+        cursor.execute ("DELETE FROM PROD2 WHERE ID = " + c1.get() +" ")  
+    except sqlite3.OperationalError: 
+        MessageBox.showinfo("!Oh, no!", "Inserta EL ID de la posición a dar de baja.")
     conexion.commit ()
     conexion.close ()
-
-
 
 Mymenu = tk.Menu(raiz)  
 filemenu = tk.Menu(Mymenu, tearoff=0) 
@@ -117,4 +119,5 @@ c4 = Entry(myframe, textvariable=c44 )
 c4.place(x = 140, y = 100)
 c5 = Entry(myframe, textvariable=c55 )
 c5.place(x = 140, y = 130)
+
 raiz.mainloop() 

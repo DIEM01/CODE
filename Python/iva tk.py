@@ -1,26 +1,20 @@
-  
 from tkinter import *
 import tkinter as tk
-
-
-
-from tkinter import messagebox as MessageBox
+from tkinter import ttk
 raiz = Tk()
-myframe = Frame(raiz, width = 1000, height = 700)
-raiz.geometry("1000x700")
-raiz.resizable(1,1)
+myframe = Frame(raiz, width = 515, height = 580)
+raiz.geometry("515x580")
+raiz.resizable(0,0)
+raiz.iconbitmap("ic.ico")
 myframe['bg'] = 'gray77'
 raiz['bg'] = 'gray77'
 myframe.pack()
-raiz.title("El marvaz esta bien sabroso")
-
+raiz.title("Factura ")
 imagen = PhotoImage(file="datos.png")
-
-
 Imagen_2 =Label(myframe, image=imagen)
-
 Imagen_2.place(x=0, y=0)
 
+#descripcion
 c11 = StringVar()
 c22 = StringVar()
 c33 = StringVar()
@@ -31,33 +25,35 @@ c77 = StringVar()
 c88 = StringVar()
 c99 = StringVar()
 c1010 = StringVar()
+
 #texto cantidad
-c111 = StringVar()
-c222 = StringVar()
-c333 = StringVar()
-c444 = StringVar()
-c555 = StringVar()
-c666 = StringVar()
-c777 = StringVar()
-c888 = StringVar()
-c999 = StringVar()
-c101010 = StringVar()
-#texto total
+c111 = IntVar()
+c222 = IntVar()
+c333 = IntVar()
+c444 = IntVar()
+c555 = IntVar()
+c666 = IntVar()
+c777 = IntVar()
+c888 = IntVar()
+c999 = IntVar()
+c101010 = IntVar()
 
-c1111 = StringVar()
-c2222 = StringVar()
-c3333 = StringVar()
-c4444 = StringVar()
-c5555 = StringVar()
-c6666 = StringVar()
-c7777 = StringVar()
-c8888 = StringVar()
-c9999 = StringVar()
-c10101010 = StringVar()
-
-
+#texto precio
+c1111 = IntVar()
+c2222 = IntVar()
+c3333 = IntVar()
+c4444 = IntVar()
+c5555 = IntVar()
+c6666 = IntVar()
+c7777 = IntVar()
+c8888 = IntVar()
+c9999 = IntVar()
+c10101010 = IntVar()
 
 #titulos
+m1w = Label(myframe , text = "Factura")
+m1w.place(x = 10, y = 100, )
+m1w.config (bg ='gray77',fg ='black',font=("Arial black",22))
 m1 = Label(myframe , text = "No.")
 m1.place(x = 10, y = 150)
 m1.config (bg ='gray77',fg ='black')
@@ -74,73 +70,201 @@ m5 = Label(myframe , text = "Total")
 m5.place(x = 370, y = 150)
 m5.config (bg ='gray77',fg ='black')
 m6 = Label(myframe , text = "Total con IVA")
-m6.place(x = 420, y = 150)
+m6.place(x = 435, y = 150)
 m6.config (bg ='gray77',fg ='black')
+m6r = Label(myframe , text = "Total  $")
+m6r.place(x = 375, y = 520)
+m6r.config (bg ='gray77',fg ='black')
+m6t = Label(myframe , text = "Total con IVA(16%)  $")
+m6t.place(x = 300, y = 540)
+m6t.config (bg ='gray77',fg ='black')
 
-#numeros 
-m0 = Label(myframe , text = "1")
-m0.place(x = 10, y = 180)
-m0.config (bg ='gray77',fg ='black')
-m0 = Label(myframe , text = "2")
-m0.place(x = 10, y = 210)
-m0.config (bg ='gray77',fg ='black')
-m0 = Label(myframe , text = "3")
-m0.place(x = 10, y = 240)
-m0.config (bg ='gray77',fg ='black')
-m0 = Label(myframe , text = "4")
-m0.place(x = 10, y = 270)
-m0.config (bg ='gray77',fg ='black')
-m0 = Label(myframe , text = "5")
-m0.place(x = 10, y = 300)
-m0.config (bg ='gray77',fg ='black')
-m0 = Label(myframe , text = "6")
-m0.place(x = 10, y = 330)
-m0.config (bg ='gray77',fg ='black')
-m0 = Label(myframe , text = "7")
-m0.place(x = 10, y = 360)
-m0.config (bg ='gray77',fg ='black')
-m0 = Label(myframe , text = "8")
-m0.place(x = 10, y = 390)
-m0.config (bg ='gray77',fg ='black')
-m0 = Label(myframe , text = "9")
-m0.place(x = 10, y = 420)
-m0.config (bg ='gray77',fg ='black')
-m0 = Label(myframe , text = "10")
-m0.place(x = 10, y = 450)
-m0.config (bg ='gray77',fg ='black')
-
+#signos y numeros
+n = int (150)
+l = int (0)
+for i in range  (10):
+    n = n +30
+    l=l+1
+    m0q = Label(myframe , text = "$")
+    m0q.place(x = 360, y = n)
+    m0q.config (bg ='gray77',fg ='black')
+    m0q = Label(myframe , text = "$")
+    m0q.place(x = 425, y = n)
+    m0q.config (bg ='gray77',fg ='black')
+    m0qp = Label(myframe , text = l)
+    m0qp.place(x = 10, y = n)
+    m0qp.config (bg ='gray77',fg ='black')
 
 #total con iva
+ma11b11 =Label (myframe,text="")
+ma11b11.place(x = 435, y = 180)
+ma11b11.config (bg ='gray77',fg ='black')
+ma22b22 =Label (myframe,text="")
+ma22b22.place(x = 435, y = 210)
+ma22b22.config (bg ='gray77',fg ='black')
+ma33b33 =Label (myframe,text="")
+ma33b33.place(x = 435, y = 240)
+ma33b33.config (bg ='gray77',fg ='black')
+ma44b44 =Label (myframe,text="")
+ma44b44.place(x = 435, y = 270)
+ma44b44.config (bg ='gray77',fg ='black')
+ma55b55 =Label (myframe,text="")
+ma55b55.place(x = 435, y = 300)
+ma55b55.config (bg ='gray77',fg ='black')
+ma66b66 =Label (myframe,text="")
+ma66b66.place(x = 435, y = 330)
+ma66b66.config (bg ='gray77',fg ='black')
+ma77b77 =Label (myframe,text="")
+ma77b77.place(x = 435, y = 360)
+ma77b77.config (bg ='gray77',fg ='black')
+ma88b88 =Label (myframe,text="")
+ma88b88.place(x = 435, y = 390)
+ma88b88.config (bg ='gray77',fg ='black')
+ma99b99 =Label (myframe,text="")
+ma99b99.place(x =435, y = 420)
+ma99b99.config (bg ='gray77',fg ='black')
+ma1010b1010 =Label (myframe,text="")
+ma1010b1010.place(x = 435, y = 450)
+ma1010b1010.config (bg ='gray77',fg ='black')
 
+#total y total con iva ln 400
+m23 =Label (myframe,text="")
+m23.place(x = 430, y = 540)
+m23.config (bg ='gray77',fg ='black')
+m24 =Label (myframe,text="")
+m24.place(x = 430, y = 520)
+m24.config (bg ='gray77',fg ='black')
+
+#total
+ma1b1 =Label (myframe,text="")
+ma1b1.place(x = 370, y = 180)
+ma1b1.config (bg ='gray77',fg ='black')
+ma2b2 =Label (myframe,text="")
+ma2b2.place(x = 370, y = 210)
+ma2b2.config (bg ='gray77',fg ='black')
+ma3b3 =Label (myframe,text="")
+ma3b3.place(x = 370, y = 240)
+ma3b3.config (bg ='gray77',fg ='black')
+ma4b4 =Label (myframe,text="")
+ma4b4.place(x = 370, y = 270)
+ma4b4.config (bg ='gray77',fg ='black')
+ma5b5 =Label (myframe,text="")
+ma5b5.place(x = 370, y = 300)
+ma5b5.config (bg ='gray77',fg ='black')
+ma6b6 =Label (myframe,text="")
+ma6b6.place(x = 370, y = 330)
+ma6b6.config (bg ='gray77',fg ='black')
+ma7b7 =Label (myframe,text="")
+ma7b7.place(x = 370, y = 360)
+ma7b7.config (bg ='gray77',fg ='black')
+ma8b8 =Label (myframe,text="")
+ma8b8.place(x = 370, y = 390)
+ma8b8.config (bg ='gray77',fg ='black')
+ma9b9 =Label (myframe,text="")
+ma9b9.place(x = 370, y = 420)
+ma9b9.config (bg ='gray77',fg ='black')
+ma10b10 =Label (myframe,text="")
+ma10b10.place(x = 370, y = 450)
+ma10b10.config (bg ='gray77',fg ='black')
 
 # cuadros de texto descripcion 
-c11i = Entry(myframe, textvariable=c11 )
+c11i = Entry(myframe)
 c11i.place(x = 60, y = 180,  width = 160, height = 20)
-c22i = Entry(myframe, textvariable=c22 )
+c22i = Entry(myframe)
 c22i.place(x = 60, y = 210,  width = 160, height = 20)
-c33i = Entry(myframe, textvariable=c33 )
+c33i = Entry(myframe )
 c33i.place(x = 60, y = 240,  width = 160, height = 20)
-c44i = Entry(myframe, textvariable=c44 )
+c44i = Entry(myframe )
 c44i.place(x = 60, y = 270,  width = 160, height = 20)
-c55i = Entry(myframe, textvariable=c55 )
+c55i = Entry(myframe )
 c55i.place(x = 60, y = 300,  width = 160, height = 20)
-c66i = Entry(myframe, textvariable=c66 )
+c66i = Entry(myframe )
 c66i.place(x = 60, y = 330,  width = 160, height = 20)
-c77i = Entry(myframe, textvariable=c77 )
+c77i = Entry(myframe )
 c77i.place(x = 60, y = 360,  width = 160, height = 20)
-c88i = Entry(myframe, textvariable=c88 )
+c88i = Entry(myframe )
 c88i.place(x = 60, y = 390,  width = 160, height = 20)
-c99i = Entry(myframe, textvariable=c99 )
+c99i = Entry(myframe )
 c99i.place(x = 60, y = 420,  width = 160, height = 20)
-c1010i = Entry(myframe, textvariable=c1010 )
+c1010i = Entry(myframe )
 c1010i.place(x = 60, y = 450,  width = 160, height = 20)
 
+#dty
+def window (): 
+       raiz.destroy()
 
-#cuadors de txto cantidad
+#cantidad x precio       
+def total():
+    a1 = float (c111i.get())
+    b1 = float  (c1111i.get())
+    a1b1=0
+    a1b1 = a1 * b1
+    c1 = a1b1 *0.16+a1b1
+    ma11b11.config (text = c1)
+    ma1b1.config (text = a1b1)
+    a2 = float  (c222i.get())
+    b2 = float  (c2222i.get())
+    a2b2 = a2 * b2
+    c2 = a2b2 *0.16+a2b2
+    ma22b22.config (text = c2)
+    ma2b2.config (text = a2b2)
+    a3 = float  (c333i.get())
+    b3= float  (c3333i.get())
+    a3b3 = a3 * b3
+    c3 = a3b3 *0.16+a3b3
+    ma33b33.config (text = c3)
+    ma3b3.config (text = a3b3)
+    a4 = float  (c444i.get())
+    b4 = float  (c4444i.get())
+    a4b4 = a4 * b4
+    c4 = a4b4 *0.16+a4b4
+    ma44b44.config (text = c4)
+    ma4b4.config (text = a4b4)
+    a5 = float  (c555i.get())
+    b5 = float  (c5555i.get())
+    a5b5 = a5 * b5
+    c5 = a5b5 *0.16+a5b5
+    ma55b55.config (text = c5)
+    ma5b5.config (text = a5b5)
+    a6 = float  (c666i.get())
+    b6 = float  (c6666i.get())
+    a6b6 = a6 * b6
+    c6 = a6b6 *0.16+a6b6
+    ma66b66.config (text = c6)
+    ma6b6.config (text = a6b6)
+    a7 = float  (c777i.get())
+    b7 = float  (c7777i.get())
+    a7b7 = a7 * b7
+    c7 = a7b7 *0.16+a7b7
+    ma77b77.config (text = c7)
+    ma7b7.config (text = a7b7)
+    a8 = float  (c888i.get())
+    b8 = float  (c8888i.get())
+    a8b8 = a8 * b8
+    c8 = a8b8 *0.16+a8b8
+    ma88b88.config (text = c8)
+    ma8b8.config (text = a8b8)
+    a9 = float  (c999i.get())
+    b9 = float  (c9999i.get())
+    a9b9 = a9 * b9
+    c9 = a9b9 *0.16+ a9b9
+    ma99b99.config (text = c9)
+    ma9b9.config (text = a9b9)
+    a10 = float  (c101010i.get())
+    b10 = float  (c10101010i.get())
+    a10b10 = a10 * b10
+    c10 = a10b10 *0.16+a10b10
+    ma1010b1010.config (text = c10)
+    ma10b10.config (text = a10b10)
+    r2 =c1+c2+c3+c4+c5+c6+c7+c8+c9+c10    
+    m24.config(text = r2)
+    r1 = a1b1 + a2b2 + a3b3 + a4b4 + a5b5 + a6b6 + a7b7 + a8b8 + a9b9 + a10b10    
+    m23.config(text = r1)
 
+#cuadors de texto cantidad
 c111i = Entry(myframe, textvariable=c111 )
 c111i.place(x = 250, y = 180,  width = 50, height = 20)
-c222i = Entry(myframe, textvariable=c222 )
+c222i = Entry(myframe, textvariable=c222, )
 c222i.place(x = 250, y = 210,  width = 50, height = 20)
 c333i = Entry(myframe, textvariable=c333)
 c333i.place(x = 250, y = 240,  width = 50, height = 20)
@@ -160,7 +284,6 @@ c101010i = Entry(myframe, textvariable=c101010 )
 c101010i.place(x = 250, y = 450,  width = 50, height = 20)
 
 #cuadros precio
-
 c1111i = Entry(myframe, textvariable=c1111 )
 c1111i.place(x = 320, y = 180,  width = 35, height = 20)
 c2222i = Entry(myframe, textvariable=c2222 )
@@ -181,12 +304,10 @@ c9999i = Entry(myframe, textvariable=c9999 )
 c9999i.place(x = 320, y = 420,  width = 35, height = 20)
 c10101010i = Entry(myframe, textvariable=c10101010 )
 c10101010i.place(x = 320, y = 450,  width = 35, height = 20)
-
-
-
-boton1 =Button(myframe, text = "Facturar", width = 10,)
-boton1.place(x = 150, y = 500)
-
-
+#botones
+b1 =Button(myframe, text = "Facturar", width = 10,command=total)
+b1.place(x = 150, y = 530)
+b2 =Button(myframe, text = "Salir", width = 10, command=window)
+b2.place(x = 50, y = 530)
 
 raiz.mainloop() 

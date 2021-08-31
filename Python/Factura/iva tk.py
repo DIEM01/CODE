@@ -203,167 +203,111 @@ def total():
     binariob1 = format(b1, "b")#lo convierte a binario
     enterob1 = int (binariob1,2) #de binario a decimal 
     a1b1 = enteroa1 * enterob1
-
     c1 = a1b1 *0.16+a1b1
     ma11b11.config (text = c1)
     ma1b1.config (text = a1b1)
+
     a2 = int  (c222i.get())
     b2 = int (c2222i.get())
-
     binarioa2 = format(a2, "b")
     enteroa2 = int (binarioa2,2)
-
     binariob2 = format(b2, "b")
     enterob2 = int (binariob2,2)
     a2b2 = enteroa2 * enterob2
-    
     c2 = a2b2 *0.16+a2b2
     ma22b22.config (text = c2)
     ma2b2.config (text = a2b2)
 
-
-
     a3 = int  (c333i.get())
     b3= int  (c3333i.get())
-
-
     binarioa3 = format(a3, "b")
     enteroa3 = int (binarioa3,2)
-
     binariob3 = format(b3, "b")
     enterob3 = int (binariob3,2)
-
     a3b3 = enteroa3 * enterob3
-
-
-  
     c3 = a3b3 *0.16+a3b3
     ma33b33.config (text = c3)
     ma3b3.config (text = a3b3)
     a4 = int  (c444i.get())
     b4 = int  (c4444i.get())
 
-
-
     binarioa4 = format(a4, "b")
     enteroa4 = int (binarioa4,2)
-
     binariob4 = format(b4, "b")
     enterob4 = int (binariob4,2)
-
     a4b4 = enteroa4 * enterob4
-
-  
     c4 = a4b4 *0.16+a4b4
     ma44b44.config (text = c4)
     ma4b4.config (text = a4b4)
+
     a5 = int  (c555i.get())
     b5 = int  (c5555i.get())
-
-
     binarioa5 = format(a5, "b")
     enteroa5 = int (binarioa5,2)
-
     binariob5 = format(b5, "b")
     enterob5 = int (binariob5,2)
-
     a5b5 = enteroa5 * enterob5
-
-
-    
     c5 = a5b5 *0.16+a5b5
     ma55b55.config (text = c5)
     ma5b5.config (text = a5b5)
+
     a6 = int  (c666i.get())
     b6 = int (c6666i.get())
-
-
-
     binarioa6 = format(a6, "b")
     enteroa6 = int (binarioa6,2)
-
     binariob6 = format(b6, "b")
     enterob6 = int (binariob6,2)
-
     a6b6 = enteroa6 * enterob6
-
-
-
-    
     c6 = a6b6 *0.16+a6b6
     ma66b66.config (text = c6)
     ma6b6.config (text = a6b6)
+
     a7 = int  (c777i.get())
     b7 = int  (c7777i.get())
-
-
-
     binarioa7 = format(a7, "b")
     enteroa7 = int (binarioa7,2)
-
     binariob7 = format(b7, "b")
     enterob7 = int (binariob7,2)
-
     a7b7 = enteroa7 * enterob7
-
-
-   
     c7 = a7b7 *0.16+a7b7
     ma77b77.config (text = c7)
     ma7b7.config (text = a7b7)
+
     a8 = int  (c888i.get())
     b8 = int (c8888i.get())
-
-
     binarioa8 = format(a8, "b")
     enteroa8 = int (binarioa8,2)
-
     binariob8 = format(b8, "b")
     enterob8 = int (binariob8,2)
-
     a8b8 = enteroa8 * enterob8
-
-
-
     a8b8 = a8 * b8
     c8 = a8b8 *0.16+a8b8
     ma88b88.config (text = c8)
     ma8b8.config (text = a8b8)
+
     a9 = int  (c999i.get())
     b9 = int  (c9999i.get())
-
-
-
     binarioa9 = format(a9, "b")
     enteroa9 = int (binarioa9,2)
-
     binariob9 = format(b9, "b")
     enterob9 = int (binariob9,2)
-
     a9b9 = enteroa9 * enterob9
-
-
-    
     c9 = a9b9 *0.16+ a9b9
     ma99b99.config (text = c9)
     ma9b9.config (text = a9b9)
+
     a10 = int  (c101010i.get())
     b10 = int  (c10101010i.get())
-
-
     binarioa10 = format(a10, "b")
     enteroa10 = int (binarioa10,2)
-
     binariob10 = format(b10, "b")
     enterob10 = int (binariob10,2)
-
     a10b10 = enteroa10 * enterob10
-
-
-   
     c10 = a10b10 *0.16+a10b10
-    ma1010b1010.config (text = c10)
+    ma1010b1010.config (text = c10)#3
     ma10b10.config (text = a10b10)
+
+    
     r2 =c1+c2+c3+c4+c5+c6+c7+c8+c9+c10    
     m23.config(text = r2)
     r1 = a1b1 + a2b2 + a3b3 + a4b4 + a5b5 + a6b6 + a7b7 + a8b8 + a9b9 + a10b10    

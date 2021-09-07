@@ -2,8 +2,8 @@ from tkinter import *
 import tkinter as tk
 from tkinter import ttk#librerías para la interfaz grafica
 raiz = Tk()
-myframe = Frame(raiz, width = 515, height = 580)
-raiz.geometry("515x580")
+myframe = Frame(raiz, width = 640, height = 580)
+raiz.geometry("640x580")
 raiz.resizable(0,0)#Bloqueo para modificar el tamaño de la interfaz
 raiz.iconbitmap("ic.ico")
 myframe['bg'] = 'gray77'
@@ -67,6 +67,10 @@ m6t = Label(myframe , text = "Total con IVA(16%)  $")
 m6t.place(x = 300, y = 540)
 m6t.config (bg ='gray77',fg ='black')
 
+
+m99 = Label(myframe , text="Total en binario")
+m99.place(x = 530, y = 150)
+m99.config (bg ='gray77',fg ='black')
 #$ y No. 
 n = int (150)
 l = int (0)
@@ -114,6 +118,40 @@ ma99b99.config (bg ='gray77',fg ='black')
 ma1010b1010 =Label (myframe,text="")
 ma1010b1010.place(x = 435, y = 450)
 ma1010b1010.config (bg ='gray77',fg ='black')
+#Texto total binario
+
+ma1b11 =Label (myframe,text="")
+ma1b11.place(x = 530, y = 180)
+ma1b11.config (bg ='gray77',fg ='black')
+ma2b22 =Label (myframe,text="")
+ma2b22.place(x = 530, y = 210)
+ma2b22.config (bg ='gray77',fg ='black')
+ma3b33 =Label (myframe,text="")
+ma3b33.place(x = 530, y = 240)
+ma3b33.config (bg ='gray77',fg ='black')
+ma4b44 =Label (myframe,text="")
+ma4b44.place(x = 530, y = 270)
+ma4b44.config (bg ='gray77',fg ='black')
+ma5b55 =Label (myframe,text="")
+ma5b55.place(x = 530, y = 300)
+ma5b55.config (bg ='gray77',fg ='black')
+ma6b66 =Label (myframe,text="")
+ma6b66.place(x = 530, y = 330)
+ma6b66.config (bg ='gray77',fg ='black')
+ma7b77=Label (myframe,text="")
+ma7b77.place(x = 530, y = 360)
+ma7b77.config (bg ='gray77',fg ='black')
+ma8b88 =Label (myframe,text="")
+ma8b88.place(x = 530, y = 390)
+ma8b88.config (bg ='gray77',fg ='black')
+ma9b99 =Label (myframe,text="")
+ma9b99.place(x = 530, y = 420)
+ma9b99.config (bg ='gray77',fg ='black')
+ma10b1010 =Label (myframe,text="")
+ma10b1010.place(x = 530, y = 450)
+ma10b1010.config (bg ='gray77',fg ='black')
+
+
 
 #Texto total y total con IVA ln 400
 m23 =Label (myframe,text="")
@@ -191,6 +229,9 @@ def total():
     binariob1 = format(b1, "b")#Lo convierte a binario
     enterob1 = int (binariob1,2) #De binario a decimal 
     a1b1 = enteroa1 * enterob1#Multiplica el precio por la cantidad para sacar el total
+    k1 = a1b1 
+    bink1 = format(k1, "b")#Convierte el total a binario
+    ma1b11.config (text = bink1)
     c1 = a1b1 *0.16+a1b1#Se multiplica el total por 0.16 y se suma el total para sacar el total con iva
     ma11b11.config (text = c1)#El texto se configura para mostrar el total y total con IVA
     ma1b1.config (text = a1b1)
@@ -202,6 +243,9 @@ def total():
     binariob2 = format(b2, "b")
     enterob2 = int (binariob2,2)
     a2b2 = enteroa2 * enterob2
+    k2 = a2b2
+    bink2 = format(k2, "b")
+    ma2b22.config (text = bink2)
     c2 = a2b2 *0.16+a2b2
     ma22b22.config (text = c2)
     ma2b2.config (text = a2b2)
@@ -213,17 +257,23 @@ def total():
     binariob3 = format(b3, "b")
     enterob3 = int (binariob3,2)
     a3b3 = enteroa3 * enterob3
+    k3 = a3b3 
+    bink3 = format(k3, "b")
+    ma3b33.config (text = bink3)
     c3 = a3b3 *0.16+a3b3
     ma33b33.config (text = c3)
     ma3b3.config (text = a3b3)
+
     a4 = int  (c444i.get())
     b4 = int  (c4444i.get())
-
     binarioa4 = format(a4, "b")
     enteroa4 = int (binarioa4,2)
     binariob4 = format(b4, "b")
     enterob4 = int (binariob4,2)
     a4b4 = enteroa4 * enterob4
+    k4 = a4b4
+    bink4 = format(k4, "b")
+    ma4b44.config (text = bink4)
     c4 = a4b4 *0.16+a4b4
     ma44b44.config (text = c4)
     ma4b4.config (text = a4b4)
@@ -235,6 +285,9 @@ def total():
     binariob5 = format(b5, "b")
     enterob5 = int (binariob5,2)
     a5b5 = enteroa5 * enterob5
+    k5 = a5b5 
+    bink5 = format(k5, "b")
+    ma5b55.config (text = bink5)
     c5 = a5b5 *0.16+a5b5
     ma55b55.config (text = c5)
     ma5b5.config (text = a5b5)
@@ -246,6 +299,9 @@ def total():
     binariob6 = format(b6, "b")
     enterob6 = int (binariob6,2)
     a6b6 = enteroa6 * enterob6
+    k6 = a6b6
+    bink6 = format(k6, "b")
+    ma6b66.config (text = bink6)
     c6 = a6b6 *0.16+a6b6
     ma66b66.config (text = c6)
     ma6b6.config (text = a6b6)
@@ -257,6 +313,9 @@ def total():
     binariob7 = format(b7, "b")
     enterob7 = int (binariob7,2)
     a7b7 = enteroa7 * enterob7
+    k7 = a7b7 
+    bink7 = format(k7, "b")
+    ma7b77.config (text = bink7)
     c7 = a7b7 *0.16+a7b7
     ma77b77.config (text = c7)
     ma7b7.config (text = a7b7)
@@ -269,6 +328,9 @@ def total():
     enterob8 = int (binariob8,2)
     a8b8 = enteroa8 * enterob8
     a8b8 = a8 * b8
+    k8 = a8b8 
+    bink8 = format(k8, "b")
+    ma8b88.config (text = bink8)
     c8 = a8b8 *0.16+a8b8
     ma88b88.config (text = c8)
     ma8b8.config (text = a8b8)
@@ -280,6 +342,9 @@ def total():
     binariob9 = format(b9, "b")
     enterob9 = int (binariob9,2)
     a9b9 = enteroa9 * enterob9
+    k9 = a9b9 
+    bink9 = format(k9, "b")
+    ma9b99.config (text = bink9)
     c9 = a9b9 *0.16+ a9b9
     ma99b99.config (text = c9)
     ma9b9.config (text = a9b9)
@@ -291,6 +356,9 @@ def total():
     binariob10 = format(b10, "b")
     enterob10 = int (binariob10,2)
     a10b10 = enteroa10 * enterob10
+    k10 = a10b10 
+    bink10 = format(k10, "b")
+    ma10b1010.config (text = bink10)
     c10 = a10b10 *0.16+a10b10
     ma1010b1010.config (text = c10)
     ma10b10.config (text = a10b10)

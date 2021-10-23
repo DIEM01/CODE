@@ -11,14 +11,7 @@ typedef struct nodo {
 } tipoNodo;
 
 typedef tipoNodo *pNodo; 
-/*
-   Name: bicola_vacia
-   Parámetros: 
-      inicio: Tipo apuntador al primer elemento de la cola
-   Regresa:
-   	  1: Si la cola está vacÃ­a
-   	  0: Si la cola no está vacÃ­a
-*/
+
 int bicola_vacia(pNodo inicio,pNodo final){
 	if(!inicio&& !final){
 		return 1;
@@ -26,13 +19,6 @@ int bicola_vacia(pNodo inicio,pNodo final){
 		return 0;
 }
 
-/*
-   Name: bicola_llena
-   Description: Revisar si hay espacio en la memoria.
-   Regresa:
-   	  1: Si la memoria está llena
-   	  0: Si la memoria no está llena
-*/
 
 int bicola_llena(){
 	
@@ -42,12 +28,7 @@ int bicola_llena(){
 		return 0;
 
 }
-/*
-   Name: ver_cabecera
-   Description: Mostrar el primer elemento de la cola
-   Parámetros: 
-      cabecera:ve esta funcion imprime los ultimos datos de inicio y fin 
-*/
+
 void ver_cabecera(pNodo inicio, pNodo final){
 	if(bicola_vacia(inicio, final)){
 		fprintf(stderr, "La bicola est%c vac%ca\n", 160, 161);
@@ -57,15 +38,6 @@ void ver_cabecera(pNodo inicio, pNodo final){
 		printf("El inicio de la bicola es: %d \n", final->informacion );
 		printf("El inicio de la bicola es: %s \n", final->sCaracter );
 }
-
-
-/*
-	Name: ver_bicola
-	Copyright: 
-	Author: ivan flores 
-	Date: 23/09/21 23:36
-	Description:esta funcion ve la cola de incio y fin 
-*/
 
 void ver_bicola(pNodo inicio,pNodo final, int eNumero, char sCaracter[20]){
 	pNodo aux;
@@ -99,14 +71,7 @@ void ver_bicola(pNodo inicio,pNodo final, int eNumero, char sCaracter[20]){
 	}
 }
 
-/*
-	Name: enbiCola
-	Copyright: 
-	Author: Ivan Flores 
-	Date: 23/09/21 23:34
-	Description: inserta los datos que se ingresaron por el usuario 
-	se pasan los datos que se ingresaron por el usuario 
-*/
+
 
 void enbiCola(pNodo *inicio, pNodo *final, int informacion , char sCaracter [20])
 {
@@ -142,20 +107,6 @@ void enbiCola(pNodo *inicio, pNodo *final, int informacion , char sCaracter [20]
 		 }
 	}
 }
-
-
-
-
-
-/*
-	Name: debiCola
-	Copyright: 
-	Author: Ivan Flores 
-	Date: 23/09/21 23:33
-	Description: decola los elementos
-*/
-
-
 
 int debiCola(pNodo *inicio, pNodo *final){
 	pNodo aux;

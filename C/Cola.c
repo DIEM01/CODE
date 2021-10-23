@@ -12,14 +12,7 @@ typedef struct nodo {
 typedef tipoNodo *pNodo; 
 
 
-/*
-   Name: cola_vacia
-   Parámetros: 
-      inicio: Tipo apuntador al primer elemento de la cola
-   Regresa:
-   	  1: Si la cola está vacÃ­a
-   	  0: Si la cola no está vacÃ­a
-*/
+
 int cola_vacia(pNodo inicio){
 	if(!inicio){
 		return 1;
@@ -27,13 +20,6 @@ int cola_vacia(pNodo inicio){
 		return 0;
 }
 
-/*
-   Name: cola_llena
-   Description: Revisar si hay espacio en la memoria.
-   Regresa:
-   	  1: Si la memoria está llena
-   	  0: Si la memoria no está llena
-*/
 
 int cola_llena(){
 	
@@ -43,12 +29,7 @@ int cola_llena(){
 		return 0;
 
 }
-/*
-   Name: ver_cabecera
-   Description: Mostrar el primer elemento de la cola
-   Parámetros: 
-      cabecera: Tipo apuntador al primer elemento de la cola
-*/
+
 void ver_cabecera(pNodo cabecera){
 	if(cola_vacia(cabecera)){
 		fprintf(stderr, "La cola est%c vac%ca\n", 160, 161);
@@ -56,15 +37,6 @@ void ver_cabecera(pNodo cabecera){
 		printf("El inicio de la cola es: %d\n", cabecera->informacion );
 }
 
-
-/*
-	Name: ver_cola
-	Copyright: 
-	Author: ivan flores 
-	Date: 23/09/21 23:36
-	Description: see pasan por parametros los datos del usuario y se imprimen en pantall 
-	el dato entero devuelve el ASCII pues no me fue posible cambiarlo a decimal
-*/
 
 void ver_cola(pNodo inicio,int eNumero, char sCaracter[20]){
 	pNodo aux;
@@ -85,15 +57,6 @@ void ver_cola(pNodo inicio,int eNumero, char sCaracter[20]){
 		printf("\n");
 	}
 }
-
-/*
-	Name: enCola
-	Copyright: 
-	Author: Ivan Flores 
-	Date: 23/09/21 23:34
-	Description: inserta los datos que se ingresaron por el usuario 
-	se pasan los datos que se ingresaron por el usuario 
-*/
 
 
 void enCola(pNodo *inicio, pNodo *final, int informacion , char sCaracter [20])
@@ -119,14 +82,6 @@ void enCola(pNodo *inicio, pNodo *final, int informacion , char sCaracter [20])
 		} 			
 	}
 }
-/*
-	Name: deCola
-	Copyright: 
-	Author: Ivan Flores 
-	Date: 23/09/21 23:33
-	Description: decola los elementos
-*/
-
 
 
 int deCola(pNodo *inicio){

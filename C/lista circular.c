@@ -29,7 +29,7 @@ void crearinicio(nodo *inicio){
 	scanf("%s", &(*inicio)->tipo );	fflush(stdin);
 	printf("Tarea de la hormiga: \n");
 	scanf("%s", &(*inicio)->tarea);	fflush(stdin);
-	printf("Tamaño promedio de la hormiga: \n");
+	printf("TamaÃ±o promedio de la hormiga: \n");
 	scanf("%s", &(*inicio)->tamano);
     (*inicio)->liga=*inicio;
     Ultimo= *inicio;
@@ -43,12 +43,12 @@ void crearinicio(nodo *inicio){
 		scanf("%s", &nuevo-> tipo);fflush(stdin);
 		printf("Tarea de la hormiga: \n");
 		scanf("%s", &nuevo->tarea);fflush(stdin);
-		printf("Tamaño promedio de la hormiga: \n");
+		printf("TamaÃ±o promedio de la hormiga: \n");
 		scanf("%s", &nuevo->tamano);
 		nuevo -> liga = *inicio;
         *inicio=nuevo;
         Ultimo->liga = *inicio;
-        printf("\n¿Agregar otro elemento a la cola 1/0?\n");
+        printf("\nÂ¿Agregar otro elemento a la cola 1/0?\n");
         scanf("%d", &sn);
     } while (sn == 1); 
 }
@@ -70,25 +70,25 @@ void crearfinal (nodo *inicio){
 	scanf("%s", &(*inicio)-> tipo);fflush(stdin);
 	printf("Tarea de la hormiga: \n");
 	scanf("%s", &(*inicio)->tarea);fflush(stdin);
-	printf("Tamaño promedio de la hormiga: \n");
+	printf("TamaÃ±o promedio de la hormiga: \n");
 	scanf("%s", &(*inicio)->tamano);
     (*inicio)->liga=*inicio;
     aux=*inicio;
     do {
     	nuevo = (nodo) malloc (sizeof(tipoNodo));
-        printf("Edad de la hormiga (meses): \n");
-		scanf("%d", &(*inicio)->edadmax);
+       printf("Edad de la hormiga (meses): \n");
+		scanf("%d", &nuevo->edadmax);
 		fflush(stdin);
 		printf("Tipo de hormiga: \n");
-		scanf("%s", &(*inicio)-> tipo);fflush(stdin);
+		scanf("%s", &nuevo-> tipo);fflush(stdin);
 		printf("Tarea de la hormiga: \n");
-		scanf("%s", &(*inicio)->tarea);fflush(stdin);
-		printf("Tamaño promedio de la hormiga: \n");
-		scanf("%s", &(*inicio)->tamano);
+		scanf("%s", &nuevo->tarea);fflush(stdin);
+		printf("Tama%o promedio de la hormiga: \n", 162);
+		scanf("%s", &nuevo->tamano);
         nuevo->liga= *inicio;
         aux->liga=nuevo;
         aux=nuevo;
-        printf("\n¿Agregar otro elemento a la cola 1/0?\n");
+        printf("\nÂ¿Agregar otro elemento a la cola 1/0?\n");
         scanf("%d", &sn);
     } while (sn == 1); 
 }
@@ -104,7 +104,7 @@ void veriterativo(nodo inicio){
 		printf("La edad de la hormiga (meses): %d \n",aux->edadmax);	
 		printf("El tipo de hormiga:%s \n",aux->tipo);
 		printf("La tarea de la hormiga: %s \n",aux->tarea);
-		printf("El tamaño promedio de la hormiga: %s \n",aux->tamano);
+		printf("El tamaÃ±o promedio de la hormiga: %s \n",aux->tamano);
 		aux=aux->liga;
 	} while (aux != inicio);	
 }
@@ -117,7 +117,7 @@ void verrecursivo  (nodo inicio, nodo Inicio2){
 	printf("La edad de la hormiga (meses): %d \n",inicio->edadmax);	
 	printf("El tipo de hormiga:%s \n",inicio->tipo);
 	printf("La tarea de la hormiga: %s \n",inicio->tarea);
-	printf("El tamaño promedio de la hormiga: %s \n",inicio->tamano);
+	printf("El tamaÃ±o promedio de la hormiga: %s \n",inicio->tamano);
 	if (inicio->liga!=Inicio2){
 		verrecursivo (inicio->liga,Inicio2);
 	}
@@ -143,7 +143,7 @@ void insertafinal(nodo inicio){
 	scanf("%s", &nuevo-> tipo);fflush(stdin);
 	printf("Tarea de la hormiga: \n");
 	scanf("%s", &nuevo->tarea);fflush(stdin);
-	printf("Tamaño promedio de la hormiga: \n");
+	printf("TamaÃ±o promedio de la hormiga: \n");
 	scanf("%s", &nuevo->tamano);
     nuevo->liga=inicio;
     aux->liga=nuevo;
@@ -180,7 +180,7 @@ void insertaantes (nodo *inicio) {
 		scanf("%s", &(nuevo2)-> tipo);fflush(stdin);
 		printf("Tarea de la hormiga: \n");
 		scanf("%s", &(nuevo2)->tarea);fflush(stdin);
-		printf("Tamaño promedio de la hormiga: \n");
+		printf("TamaÃ±o promedio de la hormiga: \n");
 		scanf("%s", &(nuevo2)->tamano);
         if (*inicio==nuevo){
         	nuevo2->liga=*inicio;
